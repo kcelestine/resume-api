@@ -31,4 +31,4 @@ jobs:
         args: zip -qq -r ./bundle.zip ./
         
     - name: Sync with s3
-      run: aws lambda update-function-code --function-name lambda-function-name --zip-file ./bundle.zip
+      run: aws lambda update-function-code --function-name lambda-function-name --zip-file fileb://./bundle.zip
