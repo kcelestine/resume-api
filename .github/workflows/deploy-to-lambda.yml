@@ -30,9 +30,5 @@ jobs:
       with:
         args: zip -qq -r ./bundle.zip ./
         
-    - name: Deploy to Lambda
-      uses: appleboy/lambda-action@master
-      with:
-        aws-region: us-east-1
-        function_name: lambda_function_name
-        zip_file: bundle.zip
+    - name: Sync with s3
+      run: aws lambda update-function-code --function-name lambda-function-name --zip-file ./bundle.zip
