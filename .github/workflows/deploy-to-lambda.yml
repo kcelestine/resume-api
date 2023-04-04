@@ -33,6 +33,6 @@ jobs:
     - name: Deploy to Lambda
       uses: appleboy/lambda-action@master
       with:
-        aws-regin: us-east-1
+        aws-region: us-east-1
         function_name: lambda_function_name
         zip_file: bundle.zip
