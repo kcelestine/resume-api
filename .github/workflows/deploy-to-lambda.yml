@@ -23,7 +23,7 @@ jobs:
       with:
         role-to-assume: arn:aws:iam::198516399747:role/deploy-resume-backend-to-aws
         role-session-name: rolesessionKhadijah
-        aws_region: us-east-1
+        aws-region: us-east-1
 
     - name: Zip
       uses: montudor/action-zip@v0.1.0
